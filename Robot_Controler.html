@@ -11819,7 +11819,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[199]:</div>
+<div class="prompt input_prompt">In&nbsp;[236]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -11875,7 +11875,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[200]:</div>
+<div class="prompt input_prompt">In&nbsp;[237]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">env_data</span><span class="o">=</span> <span class="n">fetch_maze</span><span class="p">()</span>
@@ -11895,7 +11895,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>maze-id 1-1528939377
+<pre>maze-id 1-1528940701
 [[3, 2, 2, 2, 2, 2, 2, 2, 1],
  [0, 0, 2, 2, 2, 2, 2, 0, 0],
  [2, 0, 0, 2, 2, 2, 0, 0, 2],
@@ -11925,7 +11925,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[201]:</div>
+<div class="prompt input_prompt">In&nbsp;[238]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## task 1</span>
@@ -11985,7 +11985,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[202]:</div>
+<div class="prompt input_prompt">In&nbsp;[239]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## task2:</span>
@@ -12034,7 +12034,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[203]:</div>
+<div class="prompt input_prompt">In&nbsp;[240]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## task3</span>
@@ -12085,7 +12085,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="prompt input_prompt">In&nbsp;[241]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## task 3</span>
@@ -12139,7 +12139,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[205]:</div>
+<div class="prompt input_prompt">In&nbsp;[242]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## task 4</span>
@@ -12152,42 +12152,62 @@ div#notebook {
 <span class="sd">    loc -- tuple, robots current location</span>
 <span class="sd">    act -- string, robots meant action</span>
 <span class="sd">    </span>
-<span class="sd">    the brif figure shows as follows, Rbt is the robot. &#39;u&#39; is up, &#39;d&#39; is down, &#39;l&#39; is left, &#39;r&#39; is right, </span>
-<span class="sd">                                                        &#39;2&#39; is block, &#39;1&#39; is start, &#39;3&#39; is destination, &#39;0&#39; is normal</span>
+<span class="sd">    the brif figure shows as follows, Rbt is the robot. </span>
+<span class="sd">         &#39;u&#39; is up, &#39;d&#39; is down, &#39;l&#39; is left, &#39;r&#39; is right, </span>
+<span class="sd">                                                        </span>
+<span class="sd">         &#39;2&#39; is block, &#39;1&#39; is start, &#39;3&#39; is destination, &#39;0&#39; is normal</span>
 <span class="sd">     </span>
 <span class="sd">          &#39;u&#39;                       &#39;2&#39;   </span>
-<span class="sd">     &#39;l&#39;  Rbt &#39;r&#39;      &lt;----&gt;  &#39;2&#39;  Rbt &#39;0&#39;    ----&gt;  the &#39;d&#39; is True, the &#39;r&#39; is True, the &#39;l&#39; and &#39;u&#39; is False.</span>
+<span class="sd">     &#39;l&#39;  Rbt &#39;r&#39;      &lt;----&gt;  &#39;2&#39;  Rbt &#39;0&#39;    </span>
 <span class="sd">          &#39;d&#39;                       &#39;1&#39;</span>
+<span class="sd">          </span>
+<span class="sd">                                     |</span>
+<span class="sd">                                  return: ----&gt;  the &#39;d&#39; is True, the &#39;r&#39; is True, the &#39;l&#39; and &#39;u&#39; is False.</span>
 <span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">loc_data</span> <span class="o">=</span> <span class="n">env_data</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">loc_data</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">loc_data</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>  <span class="c1"># it is the border ?</span>
+    
+    <span class="c1"># to Judge it is the border ?</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">loc_data</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">loc_data</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>  
         <span class="k">if</span> <span class="n">act</span> <span class="o">==</span> <span class="s2">&quot;u&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
-            <span class="k">elif</span> <span class="n">loc_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            
+            <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            <span class="k">elif</span> <span class="n">loc_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span> 
                 <span class="k">return</span> <span class="kc">True</span>
+            
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
+            
         <span class="k">if</span> <span class="n">act</span> <span class="o">==</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">loc_data</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
-            <span class="k">elif</span> <span class="n">loc_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            
+            <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            <span class="k">elif</span> <span class="n">loc_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span> 
                 <span class="k">return</span> <span class="kc">True</span>
+            
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
+            
         <span class="k">if</span> <span class="n">act</span> <span class="o">==</span> <span class="s2">&quot;l&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
-            <span class="k">elif</span> <span class="n">loc_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            
+            <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            <span class="k">elif</span> <span class="n">loc_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span> 
                 <span class="k">return</span> <span class="kc">True</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
         <span class="k">if</span> <span class="n">act</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">loc_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
                 <span class="k">return</span> <span class="kc">False</span>
-            <span class="k">elif</span> <span class="n">loc_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            
+            <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            <span class="k">elif</span> <span class="n">loc_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span> 
                 <span class="k">return</span> <span class="kc">True</span>
+            
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
         <span class="k">else</span><span class="p">:</span>
@@ -12214,7 +12234,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[206]:</div>
+<div class="prompt input_prompt">In&nbsp;[243]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## task 5</span>
@@ -12233,29 +12253,41 @@ div#notebook {
         <span class="k">if</span> <span class="n">act</span> <span class="o">==</span> <span class="s2">&quot;u&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
-            <span class="k">elif</span> <span class="n">env_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>   <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            
+            <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            <span class="k">elif</span> <span class="n">env_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>   
                 <span class="k">return</span> <span class="kc">True</span>
+            
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
         <span class="k">if</span> <span class="n">act</span> <span class="o">==</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">env_data</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
-            <span class="k">elif</span> <span class="n">env_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>   <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            
+             <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            <span class="k">elif</span> <span class="n">env_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>  
                 <span class="k">return</span> <span class="kc">True</span>
+            
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
         <span class="k">if</span> <span class="n">act</span> <span class="o">==</span> <span class="s2">&quot;l&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
-            <span class="k">elif</span> <span class="n">env_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>   <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            
+            <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            <span class="k">elif</span> <span class="n">env_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>   
                 <span class="k">return</span> <span class="kc">True</span>
+            
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
         <span class="k">if</span> <span class="n">act</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">env_data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
-            <span class="k">elif</span> <span class="n">env_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>   <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            
+             <span class="c1"># only the route is not blocked, then the robot is enabled to move</span>
+            <span class="k">elif</span> <span class="n">env_data</span><span class="p">[</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>  
                 <span class="k">return</span> <span class="kc">True</span>
+            
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
         <span class="k">else</span><span class="p">:</span>
@@ -12278,7 +12310,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[207]:</div>
+<div class="prompt input_prompt">In&nbsp;[244]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># internal test for is_mov_valid()</span>
@@ -12346,7 +12378,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[208]:</div>
+<div class="prompt input_prompt">In&nbsp;[245]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## task 7</span>
@@ -12357,8 +12389,10 @@ div#notebook {
 <span class="sd">    call the function of &quot;is_move_valid()&quot; to judge all four directions &#39;u&#39;,&#39;d&#39;,&#39;l&#39;,&#39;r&#39; is enabled to move</span>
 <span class="sd">    append all the enabled direction to the list of robot_action() </span>
 <span class="sd">    </span>
-<span class="sd">    the brif figure shows as follows, Rbt is the robot. &#39;u&#39; is up, &#39;d&#39; is down, &#39;l&#39; is left, &#39;r&#39; is right, </span>
-<span class="sd">                                                        &#39;2&#39; is block, &#39;1&#39; is start, &#39;3&#39; is destination, &#39;0&#39; is normal</span>
+<span class="sd">    the brif figure shows as follows, Rbt is the robot. </span>
+<span class="sd">             &#39;u&#39; is up, &#39;d&#39; is down, &#39;l&#39; is left, &#39;r&#39; is right, </span>
+<span class="sd">                                                       </span>
+<span class="sd">             &#39;2&#39; is block, &#39;1&#39; is start, &#39;3&#39; is destination, &#39;0&#39; is normal</span>
 <span class="sd">     </span>
 <span class="sd">          &#39;u&#39;                       &#39;2&#39;   </span>
 <span class="sd">     &#39;l&#39;  Rbt &#39;r&#39;      &lt;----&gt;  &#39;2&#39;  Rbt &#39;0&#39;    -------&gt;  robot_action = [&#39;d&#39;,&#39;r&#39;]</span>
@@ -12393,7 +12427,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[209]:</div>
+<div class="prompt input_prompt">In&nbsp;[246]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># test to verify the task 7.</span>
@@ -12438,7 +12472,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[222]:</div>
+<div class="prompt input_prompt">In&nbsp;[247]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># task 8</span>
@@ -12456,7 +12490,7 @@ div#notebook {
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;out of the border&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">is_move_valid</span><span class="p">(</span><span class="n">env_data</span><span class="p">,</span><span class="n">loc</span><span class="p">,</span><span class="n">act</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>   <span class="c1"># the move of robot is possible</span>
-                <span class="n">new_loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span><span class="mi">1</span>                    <span class="c1"># move the robot with direction of up, that is row -1</span>
+                <span class="n">new_loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span><span class="mi">1</span>      <span class="c1"># move the robot with direction of up, that is row -1</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">new_loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">new_loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -12465,7 +12499,7 @@ div#notebook {
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;out of the border&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">is_move_valid</span><span class="p">(</span><span class="n">env_data</span><span class="p">,</span><span class="n">loc</span><span class="p">,</span><span class="n">act</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>   <span class="c1"># the move of robot is possible</span>
-                <span class="n">new_loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span><span class="mi">1</span>                    <span class="c1"># move the robot with direction of down, that is row +1</span>
+                <span class="n">new_loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span><span class="mi">1</span>      <span class="c1"># move the robot with direction of down, that is row +1</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">new_loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">new_loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -12475,7 +12509,7 @@ div#notebook {
         <span class="k">else</span><span class="p">:</span>
             <span class="n">new_loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="k">if</span> <span class="n">is_move_valid</span><span class="p">(</span><span class="n">env_data</span><span class="p">,</span><span class="n">loc</span><span class="p">,</span><span class="n">act</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>    <span class="c1"># the move of robot is possible</span>
-                <span class="n">new_loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">1</span>                     <span class="c1"># move the robot with direction of left, that is column -1</span>
+                <span class="n">new_loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">1</span>      <span class="c1"># move the robot with direction of left, that is column -1</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">new_loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="k">elif</span> <span class="n">act</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
@@ -12484,7 +12518,7 @@ div#notebook {
         <span class="k">else</span><span class="p">:</span>
             <span class="n">new_loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="k">if</span> <span class="n">is_move_valid</span><span class="p">(</span><span class="n">env_data</span><span class="p">,</span><span class="n">loc</span><span class="p">,</span><span class="n">act</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>   <span class="c1"># the move of robot is possible</span>
-                <span class="n">new_loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span><span class="mi">1</span>                    <span class="c1"># move the robot with direction of left, that is column +1</span>
+                <span class="n">new_loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span><span class="mi">1</span>      <span class="c1"># move the robot with direction of left, that is column +1</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">new_loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
@@ -12507,7 +12541,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[223]:</div>
+<div class="prompt input_prompt">In&nbsp;[248]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># test for task8</span>
@@ -12558,7 +12592,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[228]:</div>
+<div class="prompt input_prompt">In&nbsp;[259]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># task 9</span>
@@ -12601,7 +12635,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[229]:</div>
+<div class="prompt input_prompt">In&nbsp;[260]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run the robot :-</span>
@@ -12624,14 +12658,14 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>find the treasure by round: 223 !
+<pre>find the treasure by round: 227 !
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[229]:</div>
+<div class="prompt output_prompt">Out[260]:</div>
 
 
 
